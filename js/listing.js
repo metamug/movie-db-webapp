@@ -1,4 +1,4 @@
-  document.getElementById('add-button').addEventListener('click', function () {
+document.getElementById('add-button').addEventListener('click', function () {
         var modal = document.getElementById('create-movie-modal')
         modal.style.display = 'block';
     });
@@ -15,6 +15,8 @@
         var params = "name=" + movieName + "&rating=" + movieRating;
         //Send the proper header information along with the request
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-length", params.length);
+        xhr.setRequestHeader("Connection", "close");
         xhr.onload = function () {
             var modal = document.getElementById('create-movie-modal')
             modal.style.display = 'none';
