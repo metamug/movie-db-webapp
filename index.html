@@ -1,30 +1,17 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
-
-<link rel="stylesheet" href="css/listing.css">
-
 <div class="container">
-    <br>
-    <div class="row">
-        <h1  class="app-title">
-            <i class="fa fa-film " style="color: gold"></i>
-            &nbsp; Movie Database
-            <small>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-warning fa fa-plus" id="add-button"></button>
-            </small>
-        </h1>
-
+    <br><br>
+    <div>
+        <i class="fa fa-film fa-4x" style="color: gold"></i>
+        <span  class="app-title">
+            Movie Database
+        </span>
+        <button class="btn btn-warning fa fa-plus fa-4x pull-right" id="add-button"></button>
     </div>
     <div class="listing-section"></div>
 </div>
 
-<div id="create-movie-modal" class="modal" role="dialog">
+<div id="create-movie-modal" class="modal">
     <div class="modal-dialog">
-
-        <!-- Modal content-->
         <div class="modal-content">
             <form class="form" action="#" onsubmit="handleSubmit(this)"> 
                 <div class="modal-body form-group">
@@ -39,7 +26,6 @@
                 </div>
             </form>
         </div>
-
     </div>
 </div>
 
@@ -48,4 +34,3 @@
         <a href="http://twitter.com/d3ep4k"> <i class="fa fa-html5 fa-2x" ></i> <sup>@D3EP4K</sup></a>
     </center>
 </footer>
-<script src="js/listing.js"></script>
