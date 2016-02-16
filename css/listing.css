@@ -1,0 +1,70 @@
+    .movie-name{
+        margin-left: 1em;
+        font-size: 1.8em;
+        line-height: 1.5em;
+        color: #666;
+        font-family: fantasy;
+        letter-spacing: 2px;    
+    }
+
+    .rating-section{
+        color: orange;
+        float:right;
+        letter-spacing: 0.2em;
+        font-size: 1.3em;
+        margin-top: 6px;
+    }
+
+    body{
+        background-color: crimson;
+    }
+
+    .app-title{
+        margin-left:0.5em;
+        font-family: fantasy;
+        color:white;
+        text-shadow: 1px 1px #888;
+        letter-spacing: 3px;
+    }
+
+    .listing-section{
+        padding-top: 5em;
+    }
+
+    #create-movie-modal .modal-content{
+        background-color: #222;
+    }
+
+    label{
+        margin-bottom: 1em;
+        color:white;
+        margin-top: 1em;
+        font-size: 1.5em;
+    }
+
+    button.close{
+        color:white;
+    }
+
+    .modal-title{
+        color:white;
+    }
+
+    #add-button{
+        font-size: 2em;
+    }
+
+    footer a{
+        font-size: 1.6em;
+        color: #eee;
+        float:right;
+        margin-right: 3em;
+        margin-top: 3em;
+        font-weight: bold;
+        letter-spacing: 1px;    
+    }
+
+    .big-input{
+        font-size: 2em;
+        height: 3em;
+    }
