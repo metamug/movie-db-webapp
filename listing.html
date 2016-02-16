@@ -1,0 +1,43 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <h1  class="app-title">
+            <i class="fa fa-film " style="color: gold"></i>
+            &nbsp; Movie Database
+            <small>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-warning fa fa-plus" id="add-button"></button>
+            </small>
+        </h1>
+
+    </div>
+    <div class="listing-section"></div>
+</div>
+
+<div id="create-movie-modal" class="modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form class="form" action="#" onsubmit="handleSubmit(this)"> 
+                <div class="modal-body form-group">
+                    <button type="button" class="close" data-dismiss="modal" id="close-modal">&times;</button>
+                    <label>Movie Name</label>
+                    <input class="form-control input input-lg big-input" type="text" placeholder="Movie Name"/>
+                    <label>Rating</label>
+                    <input class="form-control input input-lg big-input" type="number" min="1.0" max="5.0" value="2.5" step="any"/>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-danger btn-lg" data-dismiss="modal"  value="Add" style="width:20em;margin-right: 5px;font-size:2em"/>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <center>
+        <a href="http://twitter.com/d3ep4k"> <i class="fa fa-html5 fa-2x" ></i> <sup>@D3EP4K</sup></a>
+    </center>
+</footer>
