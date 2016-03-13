@@ -11,12 +11,12 @@ document.getElementById('add-button').addEventListener('click', function () {
         var movieName = form.querySelector('input[type=text]').value;
         var movieRating = form.querySelector('input[type=number]').value;
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://api.metamug.com/movies/v1/listing');
-        var params = "name=" + movieName + "&rating=" + movieRating;
+        xhr.open('POST', 'https://api.metamug.com/movies/v1.1/movies');
+        var params = "p=" + movieName + "&q=" + movieRating;
         //Send the proper header information along with the request
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.setRequestHeader("Content-length", params.length);
-        xhr.setRequestHeader("Connection", "close");
+        //xhr.setRequestHeader("Content-length", params.length);
+        //xhr.setRequestHeader("Connection", "close");
         xhr.onload = function () {
             var modal = document.getElementById('create-movie-modal')
             modal.style.display = 'none';
@@ -29,7 +29,7 @@ document.getElementById('add-button').addEventListener('click', function () {
     function removeMovie(event) {
         var li = this.parentNode;
         var xhr = new XMLHttpRequest();
-        xhr.open('DELETE', 'http://api.metamug.com/movies/v1/listing/' + this.dataset.movieId, false);
+        xhr.open('DELETE', 'https://api.metamug.com/movies/v1.1/movies/' + this.dataset.movieId, false);
         xhr.onload = function (e) {
             li.classList.add('animated', 'bounceOut')
             li.addEventListener("animationend", function () {
@@ -40,9 +40,10 @@ document.getElementById('add-button').addEventListener('click', function () {
     }
 
     function showMovies() {
-        document.querySelector(".listing-section").innerHTML = '<center><i class="fa fa-circle-o-notch fa-spin" style="color:white;font-size: 11em;"></i></center>'
+        document.querySelector(".listing-section").innerHTML = '<center><i class="fa fa-circle-o-notch fa-spin" style="color:white;font-size: 11em;"></i></center>';
+
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://api.metamug.com/movies/v1/listing', true);
+        xhr.open('GET', 'https://api.metamug.com/movies/v1.1/movies', true);
         xhr.onload = function () {
             var list = JSON.parse(xhr.responseText);
             var ul = document.createElement('ul');
