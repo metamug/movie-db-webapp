@@ -4,6 +4,8 @@ This example demonstrates how to make a simple CRUD operation in database using 
 
 ### APIs
 
+https://api.metamug.com/movies/v1.1/movies
+
 ```
 GET https://api.metamug.com/movies/v1.1/movies
 
