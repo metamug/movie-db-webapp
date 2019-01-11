@@ -1,6 +1,7 @@
 # movie-db-webapp
 
-This example demonstrates how to make a simple CRUD operation in database using REST APIs built with metamug.
+This example demonstrates how to make a simple CRUD operation in database using REST APIs built with Metamug.
+
 ### Resource File
 ``` xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -36,15 +37,15 @@ This example demonstrates how to make a simple CRUD operation in database using 
 ```
 ### APIs
 
-https://api.metamug.com/movies/v1.1/movies
+http://localhost:7000/movies/v1.1/movies
 
 ```
-GET https://api.metamug.com/movies/v1.1/movies
+GET http://localhost:7000/movies/v1.1/movies
 
-POST https://api.metamug.com/movies/v1.1/movies
+POST http://localhost:7000/movies/v1.1/movies
 {p:movieName, q: rating}
 
-DELETE https://api.metamug.com/movies/v1.1/movies/{id}
+DELETE http://localhost:7000/movies/v1.1/movies/{id}
 ```
 
 ### Demo
@@ -59,4 +60,4 @@ https://www.youtube.com/watch?v=RcHA2MDFVxs
 
 You can find more information about how to create resources here
 
-https://metamug.com/docs/resource-file.php
+https://metamug.com/docs/resource-file
