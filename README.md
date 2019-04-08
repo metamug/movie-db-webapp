@@ -7,19 +7,19 @@ This example demonstrates how to make a simple CRUD operation in database using 
 <Resource xmlns="http://xml.metamug.net/resource/1.0"  v="1.1">
     <Desc>Contains information about movies.</Desc>
     <Request method="GET">
-        <Query>
+        <Sql id="list">
            SELECT * FROM movie 
-        </Query>        
+        </Sql>        
     </Request>
     <Request method="POST">
-        <Update>
+        <Sql id="insert">
             INSERT INTO movie (name,rating) values ($p,CAST($q AS DECIMAL))
-        </Update>
+        </Sql>
     </Request>
     <Request method="DELETE" item="true" status="410">
-        <Update>
+        <Sql id="delete">
             DELETE FROM movie WHERE id=CAST($id AS DECIMAL)
-        </Update>
+        </Sql>
     </Request>
 </Resource>
 ```
