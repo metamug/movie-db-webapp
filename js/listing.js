@@ -1,3 +1,5 @@
+var RESOURCE_URL = 'https://api.metamug.com/movies/v1.1/movies';
+
 document.getElementById('add-button').addEventListener('click', function () {
         var modal = document.getElementById('create-movie-modal')
         modal.style.display = 'block';
@@ -11,10 +13,10 @@ document.getElementById('add-button').addEventListener('click', function () {
         var movieName = form.querySelector('input[type=text]').value;
         var movieRating = form.querySelector('input[type=number]').value;
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'http://localhost:7000/movies/v1.1/movies');
+        xhr.open('POST', RESOURCE_URL);
         var params = "p=" + movieName + "&q=" + movieRating;
         //Send the proper header information along with the request
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         //xhr.setRequestHeader("Content-length", params.length);
         //xhr.setRequestHeader("Connection", "close");
         xhr.onload = function () {
@@ -29,7 +31,7 @@ document.getElementById('add-button').addEventListener('click', function () {
     function removeMovie(event) {
         var li = this.parentNode;
         var xhr = new XMLHttpRequest();
-        xhr.open('DELETE', 'http://localhost:7000/movies/v1.1/movies/' + this.dataset.movieId, false);
+        xhr.open('DELETE', RESOURCE_URL+ '/' + this.dataset.movieId, false);
         xhr.onload = function (e) {
             li.classList.add('animated', 'bounceOut')
             li.addEventListener("animationend", function () {
@@ -43,8 +45,7 @@ document.getElementById('add-button').addEventListener('click', function () {
         document.querySelector(".listing-section").innerHTML = '<center><i class="fa fa-circle-o-notch fa-spin" style="color:white;font-size: 11em;"></i></center>';
 
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://localhost:7000/movies/v1.1/movies', true);
-        xhr.setRequestHeader("Accept","application/json");
+        xhr.open('GET', RESOURCE_URL, true);
         xhr.onload = function () {
             var list = JSON.parse(xhr.responseText);
             var ul = document.createElement('ul');
