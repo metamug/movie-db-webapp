@@ -1,4 +1,4 @@
-var RESOURCE_URL = 'https://api.metamug.com/movies/v1.1/movies';
+var RESOURCE_URL = 'http://localhost:7000/moviedb/v1.0/movie';
 
 document.getElementById('add-button').addEventListener('click', function () {
         var modal = document.getElementById('create-movie-modal')
