@@ -3,11 +3,10 @@
 This example demonstrates how to make a simple CRUD operation in database using REST APIs built with Metamug.
 
 ### Resource File
-``` xml
-<Resource xmlns="http://xml.metamug.net/resource/1.0"  v="1.1">
+<Resource xmlns="http://xml.metamug.net/resource/1.0"  v="1.0">
     <Desc>Contains information about movies.</Desc>
     <Request method="GET">
-        <Sql id="list">
+        <Sql id="wellRatedMovies">
            SELECT * FROM movie 
         </Sql>        
     </Request>
